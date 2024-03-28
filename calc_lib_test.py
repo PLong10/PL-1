@@ -28,6 +28,14 @@ def test_calc_handles_decimal_numbers():
     expression = "1.5 + 3.5"
     assert calc_lib.calc(expression) == 5.0
 
+def test_calc_handles_multiple_operations():
+    expression = "1 + 3 + 2"
+    assert calc_lib.calc(expression) == 6
+
+def test_calc_handles_order_of_operations():
+    expression = "1 + 3 * 2"
+    assert calc_lib.calc(expression) == 7
+
 def test_calc_handles_parentheses():
     expression = "(1 + 3) * 2"
     assert calc_lib.calc(expression) == 8
